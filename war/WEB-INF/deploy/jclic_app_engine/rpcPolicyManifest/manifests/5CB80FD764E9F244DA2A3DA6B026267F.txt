@@ -1,0 +1,2 @@
+serviceClass: enginePackage.client.GreetingService
+path: 5193F89D4013E28AC41C1345F183AF1C.gwt.rpc

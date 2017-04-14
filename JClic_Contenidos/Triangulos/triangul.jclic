@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="triangul" version="0.1.3">
+ <settings>
+  <title>Los triángulos</title>
+  <revision description="created" date="5/22/14" />
+  <revision description="Publicación en la zonaClic (http://clic.xtec.cat)" date="5/26/14">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Pablo Valenciano Moratinos" mail="pablo9vm@hotmail.com" />
+  <language>español</language>
+  <description>
+   <p>Este proyecto refuerza las definiciones de los diferentes tipos de triángulos:</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;Elementos de un triángulo</p>
+   <p>&lt;li&gt;Clasificación de triángulos</p>
+   <p>&lt;li&gt;Teorema de suma de ángulos interiores</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12), Secundaria (12-16)">trigonometría</descriptors>
+ </settings>
+ <sequence>
+  <item id="start" name="inicio">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Elige la correcta 1" delay="2" />
+  <item name="Elige la correcta 2" delay="2" />
+  <item name="Elige la correcta 3" delay="2" />
+  <item name="Elige la correcta 4" delay="2" />
+  <item name="Elige la correcta 5" delay="2" />
+  <item name="Elige la correcta 6" delay="2" />
+  <item name="Elige la correcta 7" delay="2" />
+  <item name="Elige la correcta 8" delay="2" />
+  <item name="Unión de triángulos" />
+  <item name="Completa" />
+  <item name="Crucigrama">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="Completa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Completa con las respuestas correctas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FF33">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true">
+     <size width="780" height="390" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="24" background="0xFFFFFF" tabWidth="12" bold="false" italic="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Los triángulos son polígonos de </text>
+      <target>
+       <answer>tres</answer>
+       <answer>3</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>tres</text>
+      </target>
+      <text size="24"> lados.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Se pueden clasificar según sus </text>
+      <target>
+       <answer>lados</answer>
+       <answer>ángulos</answer>
+       <response fill="_" length="5" maxLength="7" />
+       <text>lados</text>
+      </target>
+      <text size="24"> o según sus </text>
+      <target>
+       <answer>ángulos</answer>
+       <answer>lados</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>ángulos</text>
+      </target>
+      <text size="24">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Según sus </text>
+      <target>
+       <answer>lados</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>lados</text>
+      </target>
+      <text size="24"> pueden ser </text>
+      <target>
+       <answer>equiláteros</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>equiláteros</text>
+      </target>
+      <text size="24">, isósceles o </text>
+      <target>
+       <answer>escalenos</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>escalenos</text>
+      </target>
+      <text size="24">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Según sus </text>
+      <target>
+       <answer>ángulos</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>ángulos</text>
+      </target>
+      <text size="24"> pueden ser </text>
+      <target>
+       <answer>acutángulos</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>acutángulos</text>
+      </target>
+      <text size="24">, rectángulos u </text>
+      <target>
+       <answer>obtusángulos</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>obtusángulos</text>
+      </target>
+      <text size="24">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Los triángulos </text>
+      <target>
+       <answer>isósceles</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>isósceles</text>
+      </target>
+      <text size="24"> tienen dos lados iguales.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-Los triángulos </text>
+      <target>
+       <answer>rectángulos</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>rectángulos</text>
+      </target>
+      <text size="24"> tienen un ángulo recto.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="24">-El perímetro se calcula </text>
+      <target>
+       <answer>sumando</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>sumando</text>
+      </target>
+      <text size="24"> la longitud de todos sus </text>
+      <target>
+       <answer>lados</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>lados</text>
+      </target>
+      <text size="24">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="Crucigrama" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x99FF99" background="0xFF0000" />
+     </style>
+     <media type="UNKNOWN" level="1" />
+     <p>¡Hola! Completa el crucigrama con la clasificación de los triángulos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x00CC66" background="0xFFFF33" border="0x999999" />
+     </style>
+     <media type="UNKNOWN" level="1" />
+     <p>¡Enhorabuena! </p>
+    </cell>
+   </messages>>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x33FF33">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <textGrid rows="20" columns="13" cellWidth="20.0" cellHeight="20.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*******ISÓSCELES****</row>
+     <row>************S*******</row>
+     <row>**********RECTÁNGULO</row>
+     <row>********A***A*******</row>
+     <row>********C***L*******</row>
+     <row>OBTUSÁNGULO*E*******</row>
+     <row>********T***N*******</row>
+     <row>***EQUILÁTERO*******</row>
+     <row>********N***********</row>
+     <row>********G***********</row>
+     <row>********U***********</row>
+     <row>********L***********</row>
+     <row>********O***********</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="400.0" cellHeight="200.0" border="true" id="acrossClues">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="7" item="0" image="Equilátero.png" />
+    <cell id="7" item="0" />
+    <cell id="6" item="2" />
+    <cell id="6" item="0" />
+    <cell id="6" item="1" />
+    <cell id="5" item="0" image="Obtusángulo.png" />
+    <cell id="5" item="0" />
+    <cell id="5" item="1" />
+    <cell id="4" item="2" />
+    <cell id="4" item="0" />
+    <cell id="4" item="1" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="3" item="1" />
+    <cell id="2" item="0" image="Rectángulo.png" />
+    <cell id="2" item="0" />
+    <cell id="2" item="3" />
+    <cell id="0" item="1" />
+    <cell id="0" item="0" image="Isósceles.png" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0" />
+    <cell id="12" item="1" />
+    <cell id="12" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="400.0" cellHeight="200.0" border="true" id="downClues">
+    <style />
+    <cell id="2" item="1" />
+    <cell id="2" item="0" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0" />
+    <cell id="0" item="1" />
+    <cell id="0" item="0" />
+    <cell id="17" item="1" />
+    <cell id="17" item="0" />
+    <cell id="16" item="1" />
+    <cell id="16" item="0" />
+    <cell id="15" item="2" />
+    <cell id="15" item="1" />
+    <cell id="15" item="0" />
+    <cell id="14" item="2" />
+    <cell id="14" item="1" />
+    <cell id="14" item="0" />
+    <cell id="13" item="2" />
+    <cell id="13" item="1" />
+    <cell id="13" item="0" />
+    <cell id="12" item="1" />
+    <cell id="12" item="0" image="Escaleno.png" />
+    <cell id="11" item="3" />
+    <cell id="11" item="2" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="10" item="4" />
+    <cell id="10" item="3" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="3" />
+    <cell id="9" item="2" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" />
+    <cell id="18" item="1" />
+    <cell id="18" item="0" />
+    <cell id="19" item="1" />
+    <cell id="19" item="0" />
+    <cell id="8" item="2" />
+    <cell id="8" item="1" image="Acutángulo.png" />
+    <cell id="8" item="0" />
+    <cell id="7" item="3" />
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="6" item="0" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 1" code="">
+   <description />
+   <!--<messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>¡Correcto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Ups...</p>
+    </cell>
+   </messages>-->
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Qué son los triángulos?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Polígonos de tres lados y tres vértices</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Polígonos con tres lados, tres vértices y tres diagonales</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>Cualquier polígono regular</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Prueba otra vez...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Cómo se pueden clasificar los triángulos?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Según sus lados y/o ángulos</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Según sus vértices.</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>Según su altura</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>Enhorabuena</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Elige otra opción</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Cómo se llama el triángulo con 2 lados iguales y uno desigual?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>Isósceles</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Escaleno</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Equilátero</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>¡Correcto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Prueba de nuevo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Si un triángulo tiene un ángulo de 50º, otro de 40º y otro de 90º, será un triángulo...</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Acutángulo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>No existe</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Elige otra opción</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Cómo podemos calcular el perímetro de un triángulo?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Sumando todos sus lados</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>Sumando todos sus lados y ángulos</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Multiplicando todos sus lados</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 6" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Ups...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Cual es el perímetro de un triángulo cuyos lados miden 6cm cada uno?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>18cm</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>20cm</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>12cm</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 7" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF33" />
+     </style>
+     <p>Correcto</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFF0000" />
+     </style>
+     <p>Elige otra...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Según las siguientes medidas, ¿cuál será un triángulo escaleno?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>5+3+7</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>5+5+2</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>6+5+6</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Elige la correcta 8" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Elige la opción correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+     <p>¡Enhorabuena!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFF0000" />
+     </style>
+     <p>Elige otra opción...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>¿Qué triángulo tiene todos sus lados diferentes?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC00" />
+     </style>
+     <p>Escaleno</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Equilátero</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Unión de triángulos" code="">
+   <description>
+    <p>Une cada tipo de triángulo con su correspondiente</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x00CCCC" background="0x990099" />
+     </style>
+     <p>¡Hola! Une los triángulos con su nombre correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x00FFFF" background="0x00FF00" />
+     </style>
+     <media type="UNKNOWN" level="1" />
+     <p>¡Muy bien!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x3300FF" background="0xFF0000" />
+     </style>
+     <media type="UNKNOWN" level="1" />
+     <p>Prueba otra vez...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x3300FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9900" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="Acutángulo.png" />
+    <cell image="Equilátero.png" />
+    <cell image="Escaleno.png" />
+    <cell image="Isósceles.png" />
+    <cell image="Obtusángulo.png" />
+    <cell image="Rectángulo.png" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x00CC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Acutángulo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Equilátero</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Escaleno</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Isósceles</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Obtusángulo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFF00" background="0x00FF00" />
+     </style>
+     <p>Rectángulo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x00FF33" />
+     </style>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>Ups...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="682.0" cellHeight="467.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xCC00CC" background="0xFF9999" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" txtAlign="middle,bottom" image="triangul.png">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color foreground="0x9933FF" background="0xFFCCCC" />
+     </style>
+     <p>T R I Á N G U L O S</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Acutángulo.png" file="Acutángulo.png" />
+  <media name="Equilátero.png" file="Equilátero.png" />
+  <media name="Escaleno.png" file="Escaleno.png" />
+  <media name="Isósceles.png" file="Isósceles.png" />
+  <media name="Obtusángulo.png" file="Obtusángulo.png" />
+  <media name="Rectángulo.png" file="Rectángulo.png" />
+  <media name="triangul.png" file="triangul.png" />
+ </mediaBag>
+</JClicProject>
+

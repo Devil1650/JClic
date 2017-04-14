@@ -1,0 +1,3 @@
+# Module jclic_app_engine
+# RPC service class, partial path of RPC policy file
+enginePackage.client.GreetingService, 5193F89D4013E28AC41C1345F183AF1C.gwt.rpc
